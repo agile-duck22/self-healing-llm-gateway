@@ -1,4 +1,4 @@
-# Self-Healing, Free-Tier LLM Gateway
+# Self-Healing LLM Gateway
 
 A learning project for building a gateway that routes text requests to hosted model APIs, recovers from provider failures, and respects a **$0 budget**. The eventual React dashboard will show what happened to each request.
 
