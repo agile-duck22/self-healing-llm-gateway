@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "self-healing-llm-gateway"
+version = "0.1.0"
+description = "A resilient gateway for routing requests across LLM providers"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi==0.165.0",
+    "uvicorn==0.54.0",
+]
+
+[project.optional-dependencies]
+test = [
+    "httpx==0.28.1",
+    "pytest==9.2.0",
+]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
+
+[tool.setuptools.packages.find]
+include = ["backend*"]
